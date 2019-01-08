@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Resize rectangular image to square size using imagemagick’s command-line utility convert. 1234567891011121314151617181920212223242526function jpg_sqr() &amp;#123;    if [ &quot;$#&quot; -ne 2 ]; then        echo &quot;U">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Resize rectangular image to square size with command-line utility convert">
+<meta property="og:url" content="https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html">
+<meta property="og:site_name" content="ScriptSpry">
+<meta property="og:description" content="Resize rectangular image to square size using imagemagick’s command-line utility convert. 1234567891011121314151617181920212223242526function jpg_sqr() &amp;#123;    if [ &quot;$#&quot; -ne 2 ]; then        echo &quot;U">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://i.imgur.com/dGYZzxN.jpg">
+<meta property="og:image" content="http://i.imgur.com/bH0gxbc.jpg">
+<meta property="og:image" content="http://i.imgur.com/EkA07oM.png">
+<meta property="og:updated_time" content="2019-01-07T17:12:43.601Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Resize rectangular image to square size with command-line utility convert">
+<meta name="twitter:description" content="Resize rectangular image to square size using imagemagick’s command-line utility convert. 1234567891011121314151617181920212223242526function jpg_sqr() &amp;#123;    if [ &quot;$#&quot; -ne 2 ]; then        echo &quot;U">
+<meta name="twitter:image" content="http://i.imgur.com/dGYZzxN.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Resize rectangular image to square size with command-line utility convert</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Scripts</a></li>
+         
+          <li><a href="https://github.com/scriptspry/">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/05/21/download-top-100-songs-billboard.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/05/12/random-thecodinglove-in-your-terminal.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&text=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&is_video=false&description=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Resize rectangular image to square size with command-line utility convert&body=Check out this article: https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&name=Resize rectangular image to square size with command-line utility convert&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#wiki-jpg"><span class="toc-number">1.</span> <span class="toc-text">wiki.jpg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-jpg-sqr-wiki-jpg-400"><span class="toc-number">2.</span> <span class="toc-text">&gt; jpg_sqr wiki.jpg 400</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-png-sqr-wiki-jpg-400"><span class="toc-number">3.</span> <span class="toc-text">&gt; png_sqr wiki.jpg 400</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Resize rectangular image to square size with command-line utility convert
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">ScriptSpry</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2016-05-18T15:54:40.000Z" itemprop="datePublished">2016-05-18</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Resize rectangular image to square size using imagemagick’s command-line utility convert.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">jpg_sqr</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$#</span>"</span> -ne 2 ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"Usage: jpg_sqr img.jpg size"</span></span><br><span class="line">        <span class="built_in">return</span> 1</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    fn=$(basename <span class="string">"<span class="variable">$1</span>"</span>)</span><br><span class="line">    ext=<span class="string">"<span class="variable">$&#123;fn##*.&#125;</span>"</span></span><br><span class="line">    fn=<span class="string">"<span class="variable">$&#123;fn%.*&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    convert <span class="string">"<span class="variable">$1</span>"</span> -trim -<span class="built_in">set</span> option:size <span class="string">'%[fx:max(w,h)]x%[fx:max(w,h)]'</span> xc:white +swap \</span><br><span class="line">            -gravity center -resize <span class="variable">$2</span><span class="string">"x"</span><span class="variable">$2</span> -composite <span class="string">"<span class="variable">$fn</span>-square.jpg"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">png_sqr</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$#</span>"</span> -ne 2 ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"Usage: png_sqr img.png size"</span></span><br><span class="line">        <span class="built_in">return</span> 1</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    fn=$(basename <span class="string">"<span class="variable">$1</span>"</span>)</span><br><span class="line">    ext=<span class="string">"<span class="variable">$&#123;fn##*.&#125;</span>"</span></span><br><span class="line">    fn=<span class="string">"<span class="variable">$&#123;fn%.*&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    convert <span class="string">"<span class="variable">$1</span>"</span> -trim -<span class="built_in">set</span> option:size <span class="string">'%[fx:max(w,h)]x%[fx:max(w,h)]'</span> xc:none +swap \</span><br><span class="line">            -transparent white \</span><br><span class="line">            -gravity center -resize <span class="variable">$2</span><span class="string">"x"</span><span class="variable">$2</span> -composite <span class="string">"<span class="variable">$fn</span>-square.png"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="wiki-jpg"><a href="#wiki-jpg" class="headerlink" title="wiki.jpg"></a>wiki.jpg</h3><p><img src="http://i.imgur.com/dGYZzxN.jpg" alt="wiki1"></p>
+<h3 id="gt-jpg-sqr-wiki-jpg-400"><a href="#gt-jpg-sqr-wiki-jpg-400" class="headerlink" title="&gt; jpg_sqr wiki.jpg 400"></a>&gt; jpg_sqr wiki.jpg 400</h3><p><img src="http://i.imgur.com/bH0gxbc.jpg" alt="wiki2"></p>
+<h3 id="gt-png-sqr-wiki-jpg-400"><a href="#gt-png-sqr-wiki-jpg-400" class="headerlink" title="&gt; png_sqr wiki.jpg 400"></a>&gt; png_sqr wiki.jpg 400</h3><p><img src="http://i.imgur.com/EkA07oM.png" alt="wiki3"></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Scripts</a></li>
+         
+          <li><a href="https://github.com/scriptspry/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#wiki-jpg"><span class="toc-number">1.</span> <span class="toc-text">wiki.jpg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-jpg-sqr-wiki-jpg-400"><span class="toc-number">2.</span> <span class="toc-text">&gt; jpg_sqr wiki.jpg 400</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gt-png-sqr-wiki-jpg-400"><span class="toc-number">3.</span> <span class="toc-text">&gt; png_sqr wiki.jpg 400</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&text=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&is_video=false&description=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Resize rectangular image to square size with command-line utility convert&body=Check out this article: https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&title=Resize rectangular image to square size with command-line utility convert"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://scriptspry.com/2016/05/18/resize-rectangular-image-to-square-size-with-command-line-utility-convert.html&name=Resize rectangular image to square size with command-line utility convert&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 ScriptSpry
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Scripts</a></li>
+         
+          <li><a href="https://github.com/scriptspry/">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

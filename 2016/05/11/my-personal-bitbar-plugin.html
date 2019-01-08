@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Get BitBar{:rel=”nofollow”}.  EaseE.15m.sh12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576#!/bin/bash# &amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My Personal BitBar Plugin">
+<meta property="og:url" content="https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html">
+<meta property="og:site_name" content="ScriptSpry">
+<meta property="og:description" content="Get BitBar{:rel=”nofollow”}.  EaseE.15m.sh12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576#!/bin/bash# &amp;l">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-07T17:12:43.600Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My Personal BitBar Plugin">
+<meta name="twitter:description" content="Get BitBar{:rel=”nofollow”}.  EaseE.15m.sh12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576#!/bin/bash# &amp;l">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>My Personal BitBar Plugin</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Scripts</a></li>
+         
+          <li><a href="https://github.com/scriptspry/">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/05/12/random-thecodinglove-in-your-terminal.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/05/10/blender-python-get-scene-bounds.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&text=My Personal BitBar Plugin"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&is_video=false&description=My Personal BitBar Plugin"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My Personal BitBar Plugin&body=Check out this article: https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&name=My Personal BitBar Plugin&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#EaseE-15m-sh"><span class="toc-number">1.</span> <span class="toc-text">EaseE.15m.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bin-hn"><span class="toc-number">2.</span> <span class="toc-text">~/bin/hn</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        My Personal BitBar Plugin
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">ScriptSpry</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2016-05-11T02:01:43.000Z" itemprop="datePublished">2016-05-11</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Get <a href="https://getbitbar.com/" target="_blank" rel="noopener">BitBar</a>{:rel=”nofollow”}.</p>
+<hr>
+<h4 id="EaseE-15m-sh"><a href="#EaseE-15m-sh" class="headerlink" title="EaseE.15m.sh"></a>EaseE.15m.sh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># &lt;bitbar.title&gt;EaseE&lt;/bitbar.title&gt;</span></span><br><span class="line"><span class="comment"># &lt;bitbar.version&gt;v1.0&lt;/bitbar.version&gt;</span></span><br><span class="line"><span class="comment"># &lt;bitbar.author&gt;ScriptSpry&lt;/bitbar.author&gt;</span></span><br><span class="line"><span class="comment"># &lt;bitbar.author.github&gt;scriptspry&lt;/bitbar.author.github&gt;</span></span><br><span class="line"><span class="comment"># &lt;bitbar.desc&gt;Just a personal plugin.&lt;/bitbar.desc&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">":zap:"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"my@gmail.com | color=purple href=https://mail.google.com/mail/u/0/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hi@scriptspry.com | color=purple href=https://mail.google.com/mail/u/1/"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br><span class="line"></span><br><span class="line">curl -m 1 http://localhost/ -I &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">[ $? -gt 0 ] &amp;&amp; <span class="built_in">echo</span> <span class="string">"✗ - localhost | color=red"</span> || <span class="built_in">echo</span> <span class="string">"✓ - localhost | color=green href=http://localhost/"</span></span><br><span class="line"></span><br><span class="line">curl -m 1 http://site1.example.com/ -I &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">[ $? -gt 0 ] &amp;&amp; <span class="built_in">echo</span> <span class="string">"✗ - site1 | color=red"</span> || <span class="built_in">echo</span> <span class="string">"✓ - site1 | color=green href=http://site1.example.com/"</span></span><br><span class="line"></span><br><span class="line">curl -m 1 http://site2.example.com/ -I &gt;/dev/null 2&gt;&amp;1</span><br><span class="line">[ $? -gt 0 ] &amp;&amp; <span class="built_in">echo</span> <span class="string">"✗ - site2 | color=red"</span> || <span class="built_in">echo</span> <span class="string">"✓ - site2 | color=green href=http://site2.example.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br><span class="line"></span><br><span class="line">localip=`ipconfig getifaddr en0`</span><br><span class="line">[ $? -gt 0 ] &amp;&amp; <span class="built_in">echo</span> <span class="string">"LAN: Offline | color=red"</span> || <span class="built_in">echo</span> <span class="variable">$localip</span></span><br><span class="line"></span><br><span class="line">ip=`dig +short myip.opendns.com @resolver1.opendns.com 2&gt;/dev/null`</span><br><span class="line">[ $? -gt 0 ] &amp;&amp; <span class="built_in">echo</span> <span class="string">"WAN: Offline | color=red"</span> || <span class="built_in">echo</span> <span class="variable">$ip</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">":newspaper: HackerNews"</span></span><br><span class="line"></span><br><span class="line">IFS=$<span class="string">'\n'</span> <span class="comment">#'# this comment just to not break syntax highlighting below this line</span></span><br><span class="line">news=`~/bin/hn 2&gt;/dev/null` <span class="comment"># see below for the link</span></span><br><span class="line"><span class="keyword">if</span> [ $? -eq 0 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">	<span class="keyword">for</span> item <span class="keyword">in</span> `~/bin/hn`</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">		<span class="built_in">echo</span> <span class="string">"-- <span class="variable">$item</span>"</span></span><br><span class="line">	<span class="keyword">done</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">":page_facing_up: Bitbucket"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- Commits | color=blue href=https://bitbucket.org/XYZ/ABC/commits/all"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- Pull Requests | color=blue href=https://bitbucket.org/XYZ/ABC/pull-requests/"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">":wrench: Utility"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- JSON Lint | color=orange href=http://jlint/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- Blender Documentation | color=orange href=http://bdoc/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- Three.js Documentation | color=orange href=http://3doc/docs/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- :clock1: Clock | color=orange href=http://clock/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- :art: Palette | color=orange href=http://palette/"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">":smiling_imp: Time Waste"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- XKCD | color=violet href=http://xkcd.com/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- Facebook | color=violet href=https://www.facebook.com/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- DistroWatch | color=violet href=http://distrowatch.com/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- StackOverflow | color=violet href=https://stackoverflow.com/"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"-- TheCodingLove | color=violet href=http://thecodinglove.com/"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"---"</span></span><br></pre></td></tr></table></figure>
+<h4 id="bin-hn"><a href="#bin-hn" class="headerlink" title="~/bin/hn"></a><a href="/2016/05/06/hackernews-scraper.html">~/bin/hn</a></h4>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Scripts</a></li>
+         
+          <li><a href="https://github.com/scriptspry/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#EaseE-15m-sh"><span class="toc-number">1.</span> <span class="toc-text">EaseE.15m.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bin-hn"><span class="toc-number">2.</span> <span class="toc-text">~/bin/hn</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&text=My Personal BitBar Plugin"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&is_video=false&description=My Personal BitBar Plugin"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My Personal BitBar Plugin&body=Check out this article: https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&title=My Personal BitBar Plugin"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://scriptspry.com/2016/05/11/my-personal-bitbar-plugin.html&name=My Personal BitBar Plugin&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 ScriptSpry
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Scripts</a></li>
+         
+          <li><a href="https://github.com/scriptspry/">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
